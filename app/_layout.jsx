@@ -19,6 +19,12 @@ export default function RootLayout() {
           title: "Cinema Billboard",
         }}
       />
+      <Stack.Screen
+        name="(tabs)"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 }

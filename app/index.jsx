@@ -1,8 +1,16 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { Link } from "expo-router";
 
 export default function Home() {
   return (
     <ScrollView style={styles.container}>
+      <View style={{ padding: 16 }}>
+        <Link href="/allMovies">
+          <Text style={{ color: "#1e90ff", marginBottom: 8 }}>
+            Ir a la aplicación (Tabs)
+          </Text>
+        </Link>
+      </View>
       <View style={styles.content}>
         <Text style={styles.title}>
           🎬 Cinema Billboard - Ejercicio con Expo Router
