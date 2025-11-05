@@ -21,7 +21,7 @@ export default function RootLayout() {
       />
       
       <Stack.Screen
-        name="add-movie"
+        name="AddMovieScreen"
         options={{
           title: "Add Movie",
         }}

@@ -1,13 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Pressable } from 'react-native'
 import React from 'react'
+import { useRouter } from 'expo-router'
 
-const AddMovieFloatingButton = ({ onPress, style }) => {
+const AddMovieFloatingButton = ({ style }) => {
+  const router = useRouter()
+
+  const handlePress = () => {
+    router.push('/AddMovieScreen') // navigate to AddMovieScreen
+  }
+
   return (
-    <View style={[styles.container, style]}>
-      <Text style={styles.buttonText} onPress={onPress}>
-        +
-      </Text>
-    </View>
+    <Pressable onPress={handlePress} style={[styles.container, style]}>
+      <Text style={styles.buttonText}>+</Text>
+    </Pressable>
   )
 }
 
@@ -22,9 +27,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     width: 60,
     height: 60,
+    position: 'absolute',
+    bottom: 20,
+    right: 20,
   },
   buttonText: {
     color: 'white',
-    fontSize: 24,
+    fontSize: 32,
+    lineHeight: 36,
   },
 })
