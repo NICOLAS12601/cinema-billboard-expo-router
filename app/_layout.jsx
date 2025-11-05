@@ -1,4 +1,4 @@
-import { Stack } from "expo-router";
+import { Stack } from "expo-router"; 
 
 export default function RootLayout() {
   return (
@@ -17,6 +17,13 @@ export default function RootLayout() {
         name="index"
         options={{
           title: "Cinema Billboard",
+        }}
+      />
+      
+      <Stack.Screen
+        name="add-movie"
+        options={{
+          title: "Add Movie",
         }}
       />
     </Stack>
